@@ -12,10 +12,10 @@ body {
     position: relative;
     width: 300px;
     height: 300px;
-    background: url('logo.png') center/cover no-repeat;
+    background: url('logo.png') center/cover no-repeat; /* Updated logo filename */
     opacity: 0.3; /* Blends logo subtly */
     border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.2); /* Eerie cyan glow */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(184, 134, 11, 0.2); /* Dark yellow glow */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,16 +25,16 @@ body {
 #countdown {
     font-family: 'Courier New', monospace;
     font-size: 2.5em;
-    color: #00ccff; /* Cyan for eerie effect */
-    text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff; /* Glowing text */
+    color: #b8860b; /* Dark yellow instead of cyan */
+    text-shadow: 0 0 10px #b8860b, 0 0 20px #8b6508; /* Adjusted glow */
     animation: flicker 2s infinite alternate; /* Flickering effect */
 }
 
 #birth-text {
-    font-family: 'Courier New', monospace;
+    font-family: 'Courier New', f monospace;
     font-size: 1em;
-    color: #00ccff;
-    text-shadow: 0 0 5px #00ccff;
+    color: #b8860b; /* Dark yellow */
+    text-shadow: 0 0 5px #b8860b; /* Adjusted glow */
     margin-top: 20px;
     text-align: center;
     opacity: 0.8;
@@ -51,7 +51,7 @@ body {
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: #00ccff;
+    color: #b8860b; /* Dark yellow */
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;
@@ -63,7 +63,7 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: #00ccff;
+    color: #b8860b; /* Dark yellow */
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;
@@ -75,7 +75,7 @@ body {
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #00ccff;
+    color: #b8860b; /* Dark yellow */
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;
@@ -87,7 +87,7 @@ body {
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    color: #00ccff;
+    color: #b8860b; /* Dark yellow */
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;

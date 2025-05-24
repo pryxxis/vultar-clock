@@ -8,34 +8,18 @@ body {
     overflow: hidden;
 }
 
-.clock-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    background: url('logo.png') center/cover no-repeat; /* Updated logo filename */
-    opacity: 0.3; /* Blends logo subtly */
-    border-radius: 50%;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(184, 134, 11, 0.2); /* Dark yellow glow */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-}
-
-#countdown {
-    font-family: 'Courier New', monospace;
-    font-size: 2.5em;
-    color: #b8860b; /* Dark yellow instead of cyan */
-    text-shadow: 0 0 10px #b8860b, 0 0 20px #8b6508; /* Adjusted glow */
-    animation: flicker 2s infinite alternate; /* Flickering effect */
 }
 
 #birth-text {
-    font-family: 'Courier New', f monospace;
+    font-family: 'Courier New', monospace;
     font-size: 1em;
     color: #b8860b; /* Dark yellow */
-    text-shadow: 0 0 5px #b8860b; /* Adjusted glow */
-    margin-top: 20px;
+    text-shadow: 0 0 5px #b8860b;
+    margin-bottom: 20px; /* Space between text and clock */
     text-align: center;
     opacity: 0.8;
 }
@@ -44,50 +28,73 @@ body {
     font-weight: bold;
 }
 
-/* Analog clock markers (12, 3, 6, 9) */
+.clock-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url('logo.png') center/cover no-repeat;
+    opacity: 0.3; /* Blends logo subtly */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(184, 134, 11, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#countdown {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5em;
+    color: #b8860b;
+    text-shadow: 0 0 10px #b8860b, 0 0 20px #8b6508;
+    animation: flicker 2s infinite alternate;
+    position: absolute;
+    z-index: 1; /* Ensures countdown is above the logo */
+}
+
+/* Roman numeral markers (XII, III, VI, IX) */
 .clock-container::before {
-    content: '12';
+    content: 'XII'; /* 12 */
     position: absolute;
     top: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: #b8860b; /* Dark yellow */
+    color: #b8860b;
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;
 }
 
 .clock-container::after {
-    content: '6';
+    content: 'VI'; /* 6 */
     position: absolute;
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    color: #b8860b; /* Dark yellow */
+    color: #b8860b;
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;
 }
 
 .clock-container .marker-3::before {
-    content: '3';
+    content: 'III'; /* 3 */
     position: absolute;
-    right: 10px;
+    right: 60px; /* Adjusted to be closer to the logo */
     top: 50%;
     transform: translateY(-50%);
-    color: #b8860b; /* Dark yellow */
+    color: #b8860b;
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;
 }
 
 .clock-container .marker-9::before {
-    content: '9';
+    content: 'IX'; /* 9 */
     position: absolute;
-    left: 10px;
+    left: 60px; /* Adjusted to be closer to the logo */
     top: 50%;
     transform: translateY(-50%);
-    color: #b8860b; /* Dark yellow */
+    color: #b8860b;
     font-family: 'Courier New', monospace;
     font-size: 1.2em;
     opacity: 0.7;

@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1c2526; /* Dark grey for eerie atmosphere */
+    overflow: hidden;
+}
+
+.clock-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url('vultarian-logo.png') center/cover no-repeat;
+    opacity: 0.3; /* Blends logo subtly */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(0, 255, 255, 0.2); /* Eerie cyan glow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#countdown {
+    font-family: 'Courier New', monospace;
+    font-size: 2.5em;
+    color: #00ccff; /* Cyan for eerie effect */
+    text-shadow: 0 0 10px #00ccff, 0 0 20px #00ccff; /* Glowing text */
+    animation: flicker 2s infinite alternate; /* Flickering effect */
+}
+
+#birth-text {
+    font-family: 'Courier New', monospace;
+    font-size: 1em;
+    color: #00ccff;
+    text-shadow: 0 0 5px #00ccff;
+    margin-top: 20px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+#countdown-inline {
+    font-weight: bold;
+}
+
+/* Analog clock markers (12, 3, 6, 9) */
+.clock-container::before {
+    content: '12';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ccff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+
+.clock-container::after {
+    content: '6';
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #00ccff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+
+.clock-container .marker-3::before {
+    content: '3';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ccff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+
+.clock-container .marker-9::before {
+    content: '9';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00ccff;
+    font-family: 'Courier New', monospace;
+    font-size: 1.2em;
+    opacity: 0.7;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.9; }
+}

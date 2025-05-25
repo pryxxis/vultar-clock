@@ -27,7 +27,7 @@ body {
 #countdown-inline {
     font-weight: bold;
     font-size: 1.2em; /* Slightly larger for emphasis */
-    animation: flicker 2s infinite alternate; /* Flickering effect moved here */
+    animation: flicker 2s infinite alternate; /* Flickering effect */
 }
 
 .clock-container {
@@ -40,11 +40,11 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(184, 134, 11, 0.2);
 }
 
-/* Roman numeral markers (XII, III, VI, IX) - Inside edge */
+/* Roman numeral markers (XII, III, VI, IX) - Closer to the edge */
 .clock-container::before {
     content: 'XII'; /* 12 */
     position: absolute;
-    top: 20px; /* Closer to the inside edge */
+    top: 10px; /* Closer to the top edge (was 20px) */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -56,7 +56,7 @@ body {
 .clock-container::after {
     content: 'VI'; /* 6 */
     position: absolute;
-    bottom: 20px; /* Closer to the inside edge */
+    bottom: 10px; /* Closer to the bottom edge (was 20px) */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -68,7 +68,7 @@ body {
 .marker-3::before {
     content: 'III'; /* 3 */
     position: absolute;
-    right: 20px; /* Inside edge on the right */
+    right: 10px; /* Closer to the right edge (was 20px) */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;
@@ -80,7 +80,7 @@ body {
 .marker-9::before {
     content: 'IX'; /* 9 */
     position: absolute;
-    left: 20px; /* Inside edge on the left */
+    left: 10px; /* Closer to the left edge (was 20px) */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;

@@ -44,7 +44,7 @@ body {
 .clock-container::before {
     content: 'XII'; /* 12 */
     position: absolute;
-    top: 10px; /* Closer to the top edge (was 20px) */
+    top: 5px; /* Closer to the top edge (was 20px) */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -56,7 +56,7 @@ body {
 .clock-container::after {
     content: 'VI'; /* 6 */
     position: absolute;
-    bottom: 10px; /* Closer to the bottom edge (was 20px) */
+    bottom: 5px; /* Closer to the bottom edge (was 20px) */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;

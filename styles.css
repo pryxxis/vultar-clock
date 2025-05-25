@@ -26,6 +26,8 @@ body {
 
 #countdown-inline {
     font-weight: bold;
+    font-size: 1.2em; /* Slightly larger for emphasis */
+    animation: flicker 2s infinite alternate; /* Flickering effect moved here */
 }
 
 .clock-container {
@@ -36,26 +38,13 @@ body {
     opacity: 0.3; /* Blends logo subtly */
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(184, 134, 11, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-#countdown {
-    font-family: 'Courier New', monospace;
-    font-size: 2.5em;
-    color: #b8860b;
-    text-shadow: 0 0 10px #b8860b, 0 0 20px #8b6508;
-    animation: flicker 2s infinite alternate;
-    position: absolute;
-    z-index: 1; /* Ensures countdown is above the logo */
-}
-
-/* Roman numeral markers (XII, III, VI, IX) */
+/* Roman numeral markers (XII, III, VI, IX) - Inside edge */
 .clock-container::before {
     content: 'XII'; /* 12 */
     position: absolute;
-    top: 10px;
+    top: 20px; /* Closer to the inside edge */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -67,7 +56,7 @@ body {
 .clock-container::after {
     content: 'VI'; /* 6 */
     position: absolute;
-    bottom: 10px;
+    bottom: 20px; /* Closer to the inside edge */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -79,7 +68,7 @@ body {
 .marker-3::before {
     content: 'III'; /* 3 */
     position: absolute;
-    right: 60px; /* Positioned on the right of the logo */
+    right: 20px; /* Inside edge on the right */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;
@@ -91,7 +80,7 @@ body {
 .marker-9::before {
     content: 'IX'; /* 9 */
     position: absolute;
-    left: 60px; /* Positioned on the left of the logo */
+    left: 20px; /* Inside edge on the left */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;

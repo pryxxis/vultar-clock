@@ -1,5 +1,5 @@
 function updateCountdown() {
-    const targetDate = new Date('2025-05-25T00:00:00-04:00'); // EDT (Vultarian Standard Time)
+    const targetDate = new Date('2025-06-01T00:00:00-04:00'); // EDT (Vultarian Standard Time), updated to June 1
     const now = new Date();
     const diff = targetDate - now;
 

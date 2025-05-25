@@ -34,17 +34,19 @@ body {
     position: relative;
     width: 300px;
     height: 300px;
-    background: url('logo.png') center/cover no-repeat;
+    background: url('logo.png') center no-repeat;
+    background-size: 70%; /* Reduce logo size to 70% to avoid overlap */
     opacity: 0.3; /* Blends logo subtly */
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8), inset 0 0 10px rgba(184, 134, 11, 0.2);
+    animation: flicker 2s infinite alternate; /* Apply flicker to the logo */
 }
 
-/* Roman numeral markers (XII, III, VI, IX) - Closer to the edge */
+/* Roman numeral markers (XII, III, VI, IX) - Inside edge */
 .clock-container::before {
     content: 'XII'; /* 12 */
     position: absolute;
-    top: 5px; /* Closer to the top edge (was 20px) */
+    top: 10px; /* Inside edge */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -56,7 +58,7 @@ body {
 .clock-container::after {
     content: 'VI'; /* 6 */
     position: absolute;
-    bottom: 5px; /* Closer to the bottom edge (was 20px) */
+    bottom: 10px; /* Inside edge */
     left: 50%;
     transform: translateX(-50%);
     color: #b8860b;
@@ -68,7 +70,7 @@ body {
 .marker-3::before {
     content: 'III'; /* 3 */
     position: absolute;
-    right: 10px; /* Closer to the right edge (was 20px) */
+    right: 10px; /* Inside edge on the right */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;
@@ -80,7 +82,7 @@ body {
 .marker-9::before {
     content: 'IX'; /* 9 */
     position: absolute;
-    left: 10px; /* Closer to the left edge (was 20px) */
+    left: 10px; /* Inside edge on the left */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;

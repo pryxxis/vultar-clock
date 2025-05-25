@@ -76,10 +76,10 @@ body {
     opacity: 0.7;
 }
 
-.clock-container .marker-3::before {
+.marker-3::before {
     content: 'III'; /* 3 */
     position: absolute;
-    right: 60px; /* Adjusted to be closer to the logo */
+    right: 60px; /* Positioned on the right of the logo */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;
@@ -88,10 +88,10 @@ body {
     opacity: 0.7;
 }
 
-.clock-container .marker-9::before {
+.marker-9::before {
     content: 'IX'; /* 9 */
     position: absolute;
-    left: 60px; /* Adjusted to be closer to the logo */
+    left: 60px; /* Positioned on the left of the logo */
     top: 50%;
     transform: translateY(-50%);
     color: #b8860b;
